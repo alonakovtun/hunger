@@ -45,6 +45,7 @@ body{
 
 .item{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     overflow: hidden;
 }
@@ -93,6 +94,10 @@ body{
 }
 
 .form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
     margin-top: 15px;
 }
 
@@ -103,7 +108,7 @@ body{
     font-size: 14px;
 
     height: 60px;
-    width: 270px;
+    width: 47%;
 
     margin: 5px;
     padding: 10px;
@@ -121,7 +126,6 @@ body{
 .container{
     width: 100%;
     max-width: 1300px;
-
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -140,7 +144,7 @@ body{
 
 .header__inner{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -153,8 +157,6 @@ body{
 /* Nav */
 .nav{
     display: flex;
-    /*flex-direction: column;*/
-    /*justify-content: space-around;*/
     text-align: center;
 
     font-size: 12px;
@@ -167,7 +169,7 @@ body{
 
 .nav__link{
     margin-right: 40px;
-    margin: auto 40px;
+    margin: auto 29px;
     
     color: #fff;
    
@@ -180,10 +182,13 @@ body{
     transition: opacity .1s linear;
 }
 
-
-
 .nav__link:hover{
     opacity: 1;
+}
+
+/* Burger */
+.burger{
+    display: none;
 }
 
 /* Home */
@@ -207,32 +212,6 @@ body{
     margin: 0 auto;
     text-align: center;
 }
-/*
-.left{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-}
-
-.home__left{
-    font-size: 12px;
-    font-weight: 700;
-    color: #fff;
-
-    text-transform: uppercase;
-    transform: rotate(-90deg);
-}
-
-.right{
-    display: flex;
-    justify-content:flex-end;
-
-}
-.home__right{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}*/
 
 .home__caption{
     font-size: 12px;
@@ -258,9 +237,11 @@ body{
     display: inline-block;
     vertical-align: top;
 
-    padding: 15px 65px;
-    margin-right: 40px;
-    margin-top: 30px;
+    padding: 15px 60px;
+
+    margin: 20px 15px 0px 15px;
+    /* margin-right: 40px;
+    margin-top: 30px; */
 
     border-radius: 5px;
 
@@ -287,29 +268,14 @@ body{
 
 .about{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/*
-.about__img img{
-    position: absolute; 
-    margin-top: 70px;
-    
-}*/
-
-
-/*
-.square{
-    right: 150px;
-    top: 850px;
-}*/
 
 /* Team */
 .team{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
 
     background: #332b16 url('img/team-bg.png') center no-repeat;
     background-size: cover;
@@ -323,12 +289,13 @@ body{
 /* Booking */
 .booking{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
 }
 
 .btn--booking{
-    width: 550px;
+    width: 80%;
     margin: 15px 0;
     align-items: center;
 }
@@ -347,6 +314,7 @@ body{
 /* Spec */
 .spec{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
 
@@ -382,6 +350,7 @@ body{
 
 .menu__item{
     padding: 15px 40px; 
+    margin-bottom: 10px;
 
     font-weight: 700;
     font-size: 12px;
@@ -393,15 +362,14 @@ body{
     text-transform: uppercase;
 }
 
-.menu_item:last-child{
+.menu__item:last-child{
     border-right: none;
-
 }
 
 .menu__name{
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-around;
     margin-bottom: 50px;
 }
 .name__item{
@@ -437,11 +405,15 @@ body{
 }
 
 .img--events{
-   /* display: flex;*/
     position: relative;
-    width: 100%;
-
 }
+
+.item--event{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
 
 .event_name{
     position: absolute;
@@ -465,7 +437,7 @@ body{
 }
 
 .event_name--weddings{
-    right: -91px;
+    right: -151px;
     transform: rotate(90deg);
 }
 
@@ -502,11 +474,15 @@ body{
 }
 
 /* Contact */
+.contact{
+    display: flex;
+    justify-content: center;
+}
 
 .form--contact{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .input--contact{
@@ -515,7 +491,7 @@ body{
 
 .contact__footer{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: center;
 
     margin-bottom: 30px;
@@ -523,19 +499,20 @@ body{
 
 .contact__info{
     display: flex;
+    flex-wrap: wrap;
     width: 48%;
 }
 
 .contact__info--btn{
-    margin-top: 20px;
-    margin-right: 0;
     height: 55px;
     justify-content: center;
+    width: 100%;
 
 }
 
 .contact__fitem{
-    margin: 35px 24px;
+    margin: 0 auto;
+    padding: 40px 0;
 
     font-size: 10px;
     color: #333333;
@@ -543,8 +520,15 @@ body{
     opacity: 0.8;
 }
 
-/* Maps */
-.maps{
+/* Map */
+.map{
+    width: 100%;
+    max-width: 2100px;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+}
+
+.map__item{
     min-width: 100%;
 }
 
@@ -568,6 +552,243 @@ body{
     opacity: 0.5;
 }
 
+/* Media */
+
+@media(max-width:991px){
+    .header__inner{
+        padding: 35px 0;
+    }
+
+    .header__logo{
+        display: none;
+    }
+
+    .nav{
+        display: none; 
+        width: 100%;
+   }
+
+    .burger{
+        display:block;
+        padding: 9px 2px;
+
+        background: none;
+        border: 0;
+
+        cursor: pointer;
+    }
+
+    .burger__item{
+        display: block;
+        width: 37px;
+        height: 4px;
+
+        background-color: #fff;
+
+        font-size: 0;
+        color: transparent;
+
+        position: relative;
+    }
+
+    .burger__item:before,
+    .burger__item:after{
+        content: "";
+
+        width: 100%;
+        height: 100%;
+
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    .burger__item:before{
+        top: -8px;
+    }
+
+    .burger__item:after {
+        bottom: -8px;
+    }
+
+    .home{
+        height: 600px;
+        padding-top: 80px;
+    }
+
+    .home__text{
+        font-size: 80px;
+    }
+
+    .title{
+       /*  font-size: 28px; */
+        margin-top: 20px;
+    }
+
+    .block__title{
+        font-size: 10px;
+        margin: 15px 0;
+    }
+
+    .title--menu{
+        font-size: 14px;
+    }
+
+    .menu__item{
+        padding: 13px 25px;
+    }
+
+    .text--menu{
+        margin-bottom: 0;
+    }
+
+    .ingr{
+        font-size: 10px;
+    }
+
+    .img__content{
+        width: 50%;
+    }
+
+    .weedings,
+    .parties{
+        width: 100%;
+    }
+
+    .event_name{
+        display: none;
+        width: 100%;
+        top: 244px;
+    }
+
+    .events__footer, 
+    .booking__footer{
+        font-size: 10px;
+    }
+
+    .footer__text{
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width: 779px){
+    .item{
+        flex-wrap: wrap;
+    }
+
+    .item--event{
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    
+    .home__caption{
+        font-size: 11px;
+    }
+
+    .home__text{
+        font-size: 70px;
+    }
+
+    .img__content {
+        width: 65%;
+    }
+
+    .img__content--none{
+        display: none;
+    }
+
+    .text{
+        margin-bottom: 30px;
+    }
+
+    .text--menu{
+        margin-bottom: 0;
+    }
+
+    .title{
+        font-size: 30px;
+        margin-top: 5px;
+    }
+
+    .title--menu{
+        font-size: 13px;
+    }
+
+    .text{
+        font-size: 14px;
+    } 
+
+    .ingr {
+        font-size: 9px;
+    }
+
+    .name__item {
+        width: 50%;
+    }
+
+    .events__footer, .booking__footer {
+        font-size: 9px;
+    }
+
+    .contact__fitem{
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .contact__info{
+        width: 100%;
+    }
+
+    .contact__info--btn{
+        width: 70%;
+        margin-right: 0;
+        margin: 13px auto;
+    }
+}
+
+
+@media (max-width: 443px){
+
+    .home__text {
+        font-size: 57px;
+    }
+
+    .img__content {
+        width: 100%;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .contact__fitem{
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .btn {
+        width: 70%;
+        margin-right: 0;
+        margin: 13px auto;
+    }
+
+    .name__item {
+        width: 100%;
+    }
+
+    .item--event{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .form--contact{
+        flex-wrap: wrap;
+    }
+
+    
+}
 
 
 

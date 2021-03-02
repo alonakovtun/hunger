@@ -34,34 +34,26 @@
                         <a class="nav__link">CONTACT</a>
                     </div>
                 </nav>
+
+                <button type="button" class="burger">
+                    <span class="burger__item" >Menu</span>
+                </button>
             </div>
         </div><!-- ./container -->
     </header><!-- ./header -->
 
     <div class="home">
-        <!--<div class="left">
-            <div class="home__left">
-                Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
-            </div>
-        </div>-->
         <div class="container">
             <div class="home__inner">
-                <div class="center">
-                    <div class="home__caption"> RESTAURANT</div>
-                    <div class="home__text"> hungry people</div>
-                    <span class="line"></span>
-                    <div class="home__btn">
-                        <a href="" class="btn btn--yellow">BOOK TABLE</a>
-                        <a href="" class="btn btn--simple">EXPLORE</a>
-                    </div>
+                <div class="home__caption"> RESTAURANT</div>
+                <div class="home__text"> hungry people</div>
+                <span class="line"></span>
+                <div class="home__btn">
+                    <a href="" class="btn btn--yellow">BOOK TABLE</a>
+                    <a href="" class="btn btn--simple">EXPLORE</a>
                 </div>
             </div>
         </div>
-        <!--<div class="right">
-            <div class="home__right">
-                
-            </div>
-        </div>-->
     </div><!-- ./home -->
 
     <div class="about">
@@ -81,13 +73,7 @@
                         semper laoreet.
                     </div>
                 </div>
-                <div class="img">
-                   <!-- <div class="img">-->
-                        <img src="img/about-img.png" alt="">
-                        <!--<img class="square" src="img/square.png" alt="">-->
-                        
-                     <!-- </div>-->
-                </div>
+                <img class="img__content img__content--none" src="img/about-img.png" alt="">
             </div>                  
         </div>
     </div><!-- ./about -->
@@ -96,13 +82,7 @@
         <div class="container">
             <div class="block__title"> our team</div>
             <div class="item">
-                <div class="img">
-                    <!-- <div class="img">-->
-                         <img src="img/team-img.png" alt="">
-                         <!--<img class="square" src="img/square.png" alt="">-->
-                         
-                      <!-- </div>-->
-                 </div>
+                <img class="img__content" src="img/team-img.png" alt="">
                 <div class="content content--team">
                     <div class="title">
                         MASTER CHEF
@@ -132,19 +112,17 @@
                     <span class="line"></span>
 
                     <form class="form">
-                        <input class="input" type="text" placeholder="Name">
-                        <input class="input" type="text" placeholder="Email">
-                        <input class="input" type="text" placeholder="Phone">
-                        <input class="input" type="text" placeholder="People">
-                        <input class="input" type="text" placeholder="Date (mm/dd)" onfocus="(this.type='date')" onblur="(this.type='text')">
-                        <input class="input" type="text" placeholder="Time" onfocus="(this.type='time')" onblur="(this.type='text')">
+                        <input class="input input--booking" type="text" placeholder="Name">
+                        <input class="input input--booking" type="text" placeholder="Email">
+                        <input class="input input--booking" type="text" placeholder="Phone">
+                        <input class="input input--booking" type="text" placeholder="People">
+                        <input class="input input--booking" type="text" placeholder="Date (mm/dd)" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <input class="input input--booking" type="text" placeholder="Time" onfocus="(this.type='time')" onblur="(this.type='text')">
 
                         <a href="" class="btn btn--yellow btn--booking">BOOK TABLE</a>
                     </form>
                 </div>
-                <div class="img">
-                    <img src="img/booking-img.png" alt="">
-                </div>
+                <img class="img__content img__content--none" src="img/booking-img.png" alt="">
             </div>
 
             <div class="booking__footer">
@@ -157,13 +135,7 @@
         <div class="container">
             <div class="block__title">specialties</div>
             <div class="item">
-                <div class="img">
-                    <!-- <div class="img">-->
-                         <img src="img/spec-img.png" alt="">
-                         <!--<img class="square" src="img/square.png" alt="">-->
-                         
-                      <!-- </div>-->
-                 </div>
+               <img class="img__content" src="img/spec-img.png" alt="">  
                 <div class="content content--team">
                     <div class="title">
                         chocolate pancakes 
@@ -290,6 +262,10 @@
                             <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
                              <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
                          </div>
+                         <div class="name__item">
+                            <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                             <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                         </div>
                          
                     
                 </div>
@@ -300,14 +276,14 @@
     <div class="events">
         <div class="container">
             <div class="block__title">PRIVATE EVENTS</div>
-            <div class="item">
-                <div class="img img--events">
-                    <img src="img/weddings.png" alt="">
+            <div class="item item--event">
+                <div class="img--events">
+                    <img class="weedings" src="img/weddings.png" alt="">
                     <h2 ><span class="event_name event_name--weddings">Weddings</span></h2>
                 </div>
 
-                <div class="img img--events">
-                    <img src="img/party.png" alt="">
+                <div class="img--events">
+                    <img class="parties" src="img/party.png" alt="">
                     <h2 ><span class="event_name event_name--parties">corporate parties</span></h2>
                 </div>
             </div>
@@ -339,7 +315,7 @@
                     CONTACT
                 </div>
                 <span class="line"></span>
-                <div class="text text--menu">
+                <div class="text">
                     <span class="bold"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit
                     maximus, molestie est a, tempor magna.</span> 
                 </div>
@@ -360,22 +336,28 @@
                             5th London Boulevard, U.K.     
                         </div>
                         <div class="contact__fitem">
-                        +40 729 131 637/+40 726 458 782
+                        +40 729 131 637 <br> +40 726 458 782
                         </div>
                         <div class="contact__fitem">
                             office@mindblister.com
                         </div>
                     </div>
 
-                    <a href="" class="contact__info contact__info--btn btn btn--yellow">SEND MESSAGE</a>
+                    <div class="contact__info ">
+                        <a href="" class= "contact__info--btn btn btn--yellow">SEND MESSAGE</a>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
     </div>
 
-    <div>
-        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41011.952017814794!2d21.979585850000003!3d50.02546735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1614259159286!5m2!1sru!2spl" width=""  height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map">
+        <iframe class="map__item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41011.952017814794!2d21.979585850000003!3d50.02546735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1614259159286!5m2!1sru!2spl" width=""  height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+   
+   
 
     <footer class="footer">
         <div class="container">
