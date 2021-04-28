@@ -10,53 +10,55 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Hunger</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <div class="nav__left">
-                        <a class="nav__link">HOME</a>
-                        <a class="nav__link">ABOUT</a>
-                        <a class="nav__link">TEAM</a>
-                        <a class="nav__link">BOOKING</a>
+                        <a class="nav__link" data-scroll="#home">HOME</a>
+                        <a class="nav__link" data-scroll="#about">ABOUT</a>
+                        <a class="nav__link" data-scroll="#team">TEAM</a>
+                        <a class="nav__link" data-scroll="#booking">BOOKING</a>
                     </div>
                 </nav>
-                <img class="header__logo" src="img/logo.svg" alt="">
-                <nav class="nav">
+                <img class="header__logo" src="img/logo.svg" alt="" data-scroll="#spec">
+                <nav class="nav" id="nav2">
                     <div class="nav__right">
-                        <a class="nav__link">MENU</a>
-                        <a class="nav__link">GALERIE</a>
-                        <a class="nav__link">EVENTS</a>
-                        <a class="nav__link">CONTACT</a>
+                        <a class="nav__link" data-scroll="#menu">MENU</a>
+                        <a class="nav__link" data-scroll="#galerie">GALERIE</a>
+                        <a class="nav__link" data-scroll="#events">EVENTS</a>
+                        <a class="nav__link" data-scroll="#contact">CONTACT</a>
                     </div>
                 </nav>
 
-                <button type="button" class="burger">
+                <button type="button" class="burger" id="navToggle">
                     <span class="burger__item" >Menu</span>
                 </button>
             </div>
         </div><!-- ./container -->
     </header><!-- ./header -->
 
-    <div class="home">
+    <div class="home" id="home">
         <div class="container">
             <div class="home__inner">
                 <div class="home__caption"> RESTAURANT</div>
                 <div class="home__text"> hungry people</div>
                 <span class="line"></span>
                 <div class="home__btn">
-                    <a href="" class="btn btn--yellow">BOOK TABLE</a>
-                    <a href="" class="btn btn--simple">EXPLORE</a>
+                    <a href="" class="btn btn--yellow" data-scroll="#booking">BOOK TABLE</a>
+                    <a href="" class="btn btn--simple" data-scroll="#menu">EXPLORE</a>
                 </div>
             </div>
         </div>
     </div><!-- ./home -->
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="container">
             <div class="item">
                 <div class="content">
@@ -78,7 +80,7 @@
         </div>
     </div><!-- ./about -->
 
-    <div class="team">
+    <div class="team" id="team">
         <div class="container">
             <div class="block__title"> our team</div>
             <div class="item">
@@ -102,7 +104,7 @@
         </div>
     </div> <!-- ./team -->
 
-    <div class="booking">
+    <div class="booking" id="booking">
         <div class="container">
             <div class="item">
                 <div class="content">
@@ -131,7 +133,7 @@
         </div>
     </div><!-- ./booking -->
 
-    <div class="spec">
+    <div class="spec" id="spec">
         <div class="container">
             <div class="block__title">specialties</div>
             <div class="item">
@@ -155,7 +157,7 @@
         </div>
     </div><!-- ./spec -->
 
-    <div class="menu">
+    <div class="menu" id="menu">
         <div class="container">
             <div class="content">
                 <div class="title title--margin">
@@ -176,8 +178,7 @@
                     <a class="menu__item">DRINKS</a>
                 </div>
 
-                <div class="menu__name">
-                    
+                <div class="menu__name show" id="soupe">
                         <div class="name__item">
                            <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
                             <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
@@ -246,34 +247,105 @@
                             <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
                              <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
                          </div>
-                         <div class="name__item">
-                            <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
-                             <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
-                         </div>
-                         <div class="name__item">
-                            <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
-                             <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
-                         </div>
-                         <div class="name__item">
-                            <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
-                             <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
-                         </div>
-                         <div class="name__item">
-                            <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
-                             <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
-                         </div>
-                         <div class="name__item">
-                            <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
-                             <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
-                         </div>
-                         
-                    
                 </div>
+
+                <!--////////////////////////////////////////////////////////-->
+
+                <div class="menu__name" id="pizza">
+                    <div class="name__item">
+                       <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                        <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                    </div>
+                    <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div>
+                     <div class="name__item">
+                        <span class="title title--menu"> PIZZA QUATRO STAGIONI  . . . .   55,68 USD</span><br>
+                         <span class="ingr"> Integer ullamcorper neque eu purus euismod</span>
+                     </div> 
+            </div>
             </div>
         </div>
     </div><!-- ./menu -->
 
-    <div class="events">
+    <div class="events" id="events">
         <div class="container">
             <div class="block__title">PRIVATE EVENTS</div>
             <div class="item item--event">
@@ -293,7 +365,7 @@
         </div>
     </div><!-- ./events -->
 
-    <div class="photo">
+    <div class="photo" id="galerie">
         <div class="photo__item">
             <img class="photo__img" src="img/photo-1.png" alt="">
         </div>
@@ -308,7 +380,7 @@
         </div>
     </div><!-- photo -->
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="container">
             <div class="content">
                 <div class="title title--margin">
@@ -371,7 +443,7 @@
     </footer>
 
 
-
+    <script src="app.js"></script>
 </body>
 
 </html>

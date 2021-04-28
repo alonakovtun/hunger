@@ -142,11 +142,23 @@ body{
     z-index: 1000;
 }
 
+.header.fixed{
+    height: 135px;
+    position: fixed;
+    background-color: #180d02;
+
+    animation: smoothScroll 1s forwards;
+}
+
 .header__inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* .header.fixed .header__inner{
+    padding: 25px 0;
+ } */
 
 .header__logo{
     width: 9%;
@@ -163,12 +175,18 @@ body{
     font-weight: 700;
     text-transform: uppercase ;
 
-    padding: 35px 0;
+   
+}
+
+.nav__left,
+.nav__right{
+    justify-content: center;
+
+    padding-bottom: 30px;
     border-bottom: 1px solid #515369;
 }
 
 .nav__link{
-    margin-right: 40px;
     margin: auto 29px;
     
     color: #fff;
@@ -201,7 +219,7 @@ body{
     height: 800px;
     padding-top: 150px;
 
-    background: #332b16 url('img/header-bg.png') center no-repeat;
+    background: #180d02 url('img/header-bg.png') center no-repeat;
     background-size: cover;
 }
 
@@ -237,7 +255,7 @@ body{
     display: inline-block;
     vertical-align: top;
 
-    padding: 15px 60px;
+    padding: 15px 50px;
 
     margin: 20px 15px 0px 15px;
     /* margin-right: 40px;
@@ -277,7 +295,7 @@ body{
     display: flex;
     flex-wrap: wrap;
 
-    background: #332b16 url('img/team-bg.png') center no-repeat;
+    background: #180d02 url('img/team-bg.png') center no-repeat;
     background-size: cover;
 }
 
@@ -318,7 +336,7 @@ body{
     flex-direction: column;
     justify-content: center;
 
-    background: #332b16 url('img/spec-bg.png') center no-repeat;
+    background: #180d02 url('img/spec-bg.png') center no-repeat;
     background-size: cover;
 }
 
@@ -400,7 +418,7 @@ body{
     flex-direction: column;
     justify-content: center;
 
-    background: #332b16 url('img/spec-bg.png') center no-repeat;
+    background: #180d02 url('img/spec-bg.png') center no-repeat;
     background-size: cover;
 }
 
@@ -563,10 +581,30 @@ body{
         display: none;
     }
 
+    .header.fixed{
+        height: auto;
+    }
+
     .nav{
         display: none; 
         width: 100%;
    }
+
+    .nav.show{
+        display: block; 
+    }
+
+    .nav.show .nav__link{
+        display: block;
+
+        margin: 10px;
+    }
+
+    .nav__left,
+    .nav__right{
+    padding-bottom: 5px;
+    border-bottom: none;
+}
 
     .burger{
         display:block;
@@ -620,6 +658,8 @@ body{
     .home__text{
         font-size: 80px;
     }
+
+
 
     .title{
        /*  font-size: 28px; */
